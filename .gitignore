@@ -1,2 +1,8 @@
 *.idea
 *.iml
+target
+Будет удалено TestFile.json
+Будет удалено TestFile.xml
+Будет удалено src/main/resources/
+Будет удалено src/test/
+Будет удалено target/
