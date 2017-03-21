@@ -1,0 +1,78 @@
+<list>
+  <user>
+    <Id>a03f7fa9-43f0-496e-96a3-c201d1ce4b56</Id>
+    <name>George</name>
+    <surname>Peterson</surname>
+    <dateOfBirth resolves-to="java.time.Ser">
+      <byte>3</byte>
+      <int>1950</int>
+      <byte>1</byte>
+      <byte>1</byte>
+    </dateOfBirth>
+    <phoneNumber>999-999-9999</phoneNumber>
+    <carsCollection/>
+  </user>
+  <user>
+    <Id>7e39475d-9f2f-482d-8829-a3a6dbf7ab5a</Id>
+    <name>Peter</name>
+    <surname>Kolin</surname>
+    <dateOfBirth resolves-to="java.time.Ser">
+      <byte>3</byte>
+      <int>1960</int>
+      <byte>1</byte>
+      <byte>1</byte>
+    </dateOfBirth>
+    <phoneNumber>888-888-8888</phoneNumber>
+    <carsCollection>
+      <com.company.Car.Car>
+        <model>RX-2</model>
+        <number>BB-321-BB</number>
+        <color>RED</color>
+        <bodyStyle>SEDAN</bodyStyle>
+        <dateOfProduction resolves-to="java.time.Ser">
+          <byte>3</byte>
+          <int>1963</int>
+          <byte>1</byte>
+          <byte>1</byte>
+        </dateOfProduction>
+      </com.company.Car.Car>
+      <com.company.Car.Car>
+        <model>RX-1</model>
+        <number>AA-123-AA</number>
+        <color>BLACK</color>
+        <bodyStyle>COUPE</bodyStyle>
+        <dateOfProduction resolves-to="java.time.Ser">
+          <byte>3</byte>
+          <int>1955</int>
+          <byte>1</byte>
+          <byte>1</byte>
+        </dateOfProduction>
+      </com.company.Car.Car>
+      <com.company.Car.Car>
+        <model>RX-3</model>
+        <number>CC-333-CC</number>
+        <color>WHITE</color>
+        <bodyStyle>LIMOUSINE</bodyStyle>
+        <dateOfProduction resolves-to="java.time.Ser">
+          <byte>3</byte>
+          <int>1932</int>
+          <byte>1</byte>
+          <byte>1</byte>
+        </dateOfProduction>
+      </com.company.Car.Car>
+    </carsCollection>
+  </user>
+  <user>
+    <Id>aa0d5db5-4e05-4ac6-97ac-6be8599469a5</Id>
+    <name>Steve</name>
+    <surname>Voznik</surname>
+    <dateOfBirth resolves-to="java.time.Ser">
+      <byte>3</byte>
+      <int>1970</int>
+      <byte>1</byte>
+      <byte>1</byte>
+    </dateOfBirth>
+    <phoneNumber>777-777-7777</phoneNumber>
+    <carsCollection/>
+  </user>
+</list>

@@ -6,24 +6,24 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class UserDAO {
+public class UsersList {
 
-    private List<User> userBase;
+    private List<User> users;
 
-    public UserDAO(){
-        userBase = new ArrayList<>();
+    public UsersList(){
+        users = new ArrayList<>();
     }
 
     //Check whether base is empty
     public boolean isBaseEmpty(){
-        return userBase.isEmpty();
+        return users.isEmpty();
     }
 
     //CRUD realisation
     //add user to base
     public void addUser(User user){
         if(isUniqueUser(user)){
-            userBase.add(user);
+            users.add(user);
         }
     }
 
@@ -31,8 +31,8 @@ public class UserDAO {
 
     public boolean deleteUserByPhoneNumber(String number){
         User user = findUserByPhoneNumber(number);
-        if(!userBase.isEmpty() && user!=null){
-            userBase.remove(user);
+        if(!users.isEmpty() && user!=null){
+            users.remove(user);
             return true;
         }
         return false;
@@ -40,10 +40,10 @@ public class UserDAO {
 
     //check user uniqueness
     private boolean isUniqueUser(User user) {
-        if(userBase.isEmpty()){
+        if(users.isEmpty()){
             return true;
         }else{
-            for(User u : userBase){
+            for(User u : users){
                 if(!u.getPhoneNumber().equals(user.getPhoneNumber())){
                     return true;
                 }
@@ -52,14 +52,19 @@ public class UserDAO {
         return false;
     }
 
-    public List<User> getAllUserBase(){
-        return userBase;
+    public List<User> getUsers(){
+        return users;
+    }
+
+    public void setUsers(ArrayList<User> users){
+        this.users.clear();
+        this.users = users;
     }
 
 
     public User findUserByName(String name){
         User result= null;
-        for(User user : userBase){
+        for(User user : users){
             if(user.getName().contains(name)){
                 result = user;
             }
@@ -70,7 +75,7 @@ public class UserDAO {
     //Finding user in given collection by matching surname or part of surname
     public User findUserBySurname(String surname){
         User result = null;
-        for(User user : userBase){
+        for(User user : users){
             if(user.getSurname().contains(surname)){
                 result = user;
             }
@@ -81,7 +86,7 @@ public class UserDAO {
 
     public User findUserByPhoneNumber(String number){
         User result = null;
-        for (User user : userBase) {
+        for (User user : users) {
             if (user.getPhoneNumber().equals(number)) {
                 result = user;
             }
@@ -89,6 +94,6 @@ public class UserDAO {
         return result;
     }
     public void sortByName(){
-        Collections.sort(userBase, (user1, user2) -> user1.getName().compareTo(user2.getName()));
+        Collections.sort(users, (user1, user2) -> user1.getName().compareTo(user2.getName()));
     }
 }

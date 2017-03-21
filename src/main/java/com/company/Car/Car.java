@@ -38,13 +38,16 @@ public class Car {
     }
 
     @Override
-    public String  toString() {
-        return "CarModel{" +
+    public String toString() {
+        return "Car{" +
                 "model='" + model + '\'' +
-                ", body style=" + bodyStyle +
-                ", date of production=" + dateOfProduction +
+                ", number='" + number + '\'' +
+                ", color=" + color +
+                ", bodyStyle=" + bodyStyle +
+                ", dateOfProduction=" + dateOfProduction + "."+
                 '}';
     }
+
     //Builder for Car
 
     public static class CarBuilder{

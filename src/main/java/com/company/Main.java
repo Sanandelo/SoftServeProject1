@@ -6,18 +6,19 @@ import com.company.Car.Car;
 import com.company.Car.CarService;
 import com.company.Car.Colors;
 import com.company.User.User;
-import com.company.User.UserDAO;
+import com.company.User.UsersList;
 
 import javax.xml.bind.JAXBException;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.stream.StreamSupport;
 
 public class Main {
 
     public static void main(String[] args) throws IOException, JAXBException {
        //Create user db
-        UserDAO userDAO = new UserDAO();
+        UsersList userDAO = new UsersList();
         //get object which create user and car
         //ConsoleReader consoleReader = new ConsoleReader();
         //create some users
@@ -79,19 +80,19 @@ public class Main {
         userDAO.addUser(user3);
 
         //show list of added users
-        List<User> allUser = userDAO.getAllUserBase();
+        List<User> allUser = userDAO.getUsers();
 
         System.out.println("");
 
         //find user by name;
         User userFromBase1 = userDAO.findUserByName("Peter");
-        System.out.println(userFromBase1);
-        System.out.println("");
+        //System.out.println(userFromBase1);
+        //System.out.println("");
 
         //find user by surname;
         User userFromBase2 = userDAO.findUserBySurname("Peterson");
-        System.out.println(userFromBase2);
-        System.out.println("");
+        //System.out.println(userFromBase2);
+        //System.out.println("");
 
         //find user by number of phone
 
@@ -107,7 +108,7 @@ public class Main {
         //user cars sorting
        CarService carService = new CarService(userFromBase1.getCarsOfUser());
        carService.sortByDataAcs();
-       carService.getCarCollection().forEach(System.out::println);
+   //    carService.getCarCollection().forEach(System.out::println);
 
 
        //adapter java to json
@@ -122,8 +123,22 @@ public class Main {
 //        System.out.println(users);
 
 
-        AdapterToXML adapterToXML = new AdapterToXML();
-        adapterToXML.userToXML(userDAO.getAllUserBase(),"TestFile.xml");
+//        AdapterToXML adapterToXML = new AdapterToXML();
+//        adapterToXML.writeUsers(userDAO,"TestFile.xml");
+//        List<User> list = adapterToXML.readUsers("TestFile.xml");
+//
+//        adapterToXML.writeUser(user1,"TestFile1.xml");
+//        User user = adapterToXML.readUser("TestFile1.xml");
+//        System.out.println(user);
+         AdapterToText adapterToText = new AdapterToText();
+//         adapterToText.writeUsers(userDAO,"Test.txt");
+//         List<User> list = adapterToText.readUsers("Test.txt");
+//        System.out.println("list");
+//        System.out.println(list.get(1));
 
+        adapterToText.writeUser(userFromBase1,"Test1.txt");
+        User user = adapterToText.readUser("Test1.txt");
+        System.out.println(userFromBase1);
+        System.out.println(user);
     }
 }

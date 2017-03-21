@@ -2,17 +2,15 @@ package com.company.User;
 
 import com.company.Car.Car;
 
-import javax.xml.bind.annotation.XmlAnyAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-@XmlRootElement
+
 public class User {
-    private String Id;
+    private String Id;//atribute in xml for user
     private String name;
     private String surname;
     private LocalDate dateOfBirth;
@@ -29,11 +27,11 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    @XmlElement
+
     public String getName() {
         return name;
     }
-    @XmlElement
+
     public String getSurname() {
         return surname;
     }
@@ -45,13 +43,20 @@ public class User {
     public String getId() {
         return Id;
     }
-    @XmlElement
+
     public String getPhoneNumber() {
         return phoneNumber;
     }
-    @XmlElement
+
     public List<Car> getCarsOfUser() {
         return carsCollection;
+    }
+    public void setCarsCollection(List<Car> list){
+
+        this.carsCollection = list;
+    }
+    public void setId(String id ){
+        this.Id = id;
     }
 
     public boolean addCar(Car car){
@@ -86,14 +91,15 @@ public class User {
 
     @Override
     public String toString() {
-        return "User: " +
-                "name='" + name + '\'' +
+        return "User{" +
+                "Id='" + Id + '\'' +
+                ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", dateOfBirth=" + dateOfBirth +
-                ", numberOfPhone='" + phoneNumber + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", carsCollection=" + carsCollection + "." +
                 '}';
     }
-
 
     public static class UserBuilder{
         private String nestedName;
