@@ -9,3 +9,6 @@ target
 Будет удалено Test.txt
 Будет удалено Test1.txt
 Будет удалено TestFile1.xml
+/TestFile.xml
+/TestFile.json
+/SoftServeProject1.iml
