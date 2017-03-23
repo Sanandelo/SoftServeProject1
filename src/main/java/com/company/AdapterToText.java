@@ -127,7 +127,7 @@ public class AdapterToText implements SerializationInterface {
 
     private LocalDate parseDateOfBirth(String text){
         LocalDate localDate = null;
-        Pattern dateOfBirthPattern = Pattern.compile("dateOfBirth=(.*?),");
+        Pattern dateOfBirthPattern = Pattern.compile("dateOfBirth=(\\d+-\\d+-\\d+)");
         Matcher matcher = dateOfBirthPattern.matcher(text);
         if(matcher.find()){
             localDate = LocalDate.parse(matcher.group(1));
@@ -214,7 +214,7 @@ public class AdapterToText implements SerializationInterface {
 
     private LocalDate parseDateOfProduction(String text){
         LocalDate localDate = null;
-        Pattern dateOfProductionPattern = Pattern.compile("dateOfProduction=(.*?)\\.");
+        Pattern dateOfProductionPattern = Pattern.compile("dateOfProduction=(\\d+-\\d+-\\d+)");
         Matcher matcher = dateOfProductionPattern.matcher(text);
         if(matcher.find()){
             localDate = LocalDate.parse(matcher.group(1));

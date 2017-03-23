@@ -94,6 +94,6 @@ public class UsersList {
         return result;
     }
     public void sortByName(){
-        Collections.sort(users, (user1, user2) -> user1.getName().compareTo(user2.getName()));
+        users.sort((user1, user2) -> user1.getName().compareTo(user2.getName()));
     }
 }

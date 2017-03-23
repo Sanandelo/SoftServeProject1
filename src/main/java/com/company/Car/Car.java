@@ -44,7 +44,7 @@ public class Car {
                 ", number='" + number + '\'' +
                 ", color=" + color +
                 ", bodyStyle=" + bodyStyle +
-                ", dateOfProduction=" + dateOfProduction + "."+
+                ", dateOfProduction=" + dateOfProduction +
                 '}';
     }
 

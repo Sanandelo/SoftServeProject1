@@ -18,6 +18,9 @@ public class AdapterToXML implements SerializationInterface {
        xstream.alias("user", User.class);
        xstream.alias("users", UsersList.class);
        xstream.addImplicitCollection(UsersList.class, "users");
+
+       xstream.useAttributeFor(User.class, "Id");
+
        String xml = xstream.toXML(userList.getUsers());
        fileWriter.write(xml);
        fileWriter.close();

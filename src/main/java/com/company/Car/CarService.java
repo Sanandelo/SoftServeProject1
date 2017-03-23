@@ -14,12 +14,12 @@ public class CarService {
     }
     //Sort collection of cars in decline order
     public void sortByDataDes(){
-        Collections.sort(carCollection, (car1, car2) -> car1.getDateOfProduction().compareTo(car2.getDateOfProduction()));
+        carCollection.sort((car1, car2) -> car1.getDateOfProduction().compareTo(car2.getDateOfProduction()));
     }
     //Sort collection of cars in incline order
 
     public void sortByDataAcs(){
-        Collections.sort(carCollection,(car1, car2) -> car2.getDateOfProduction().compareTo(car1.getDateOfProduction()));
+        carCollection.sort((car1, car2) -> car2.getDateOfProduction().compareTo(car1.getDateOfProduction()));
 
     }
     public Car findCarByNumber(String number){

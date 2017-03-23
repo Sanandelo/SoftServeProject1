@@ -1,6 +1,5 @@
 <list>
-  <user>
-    <Id>a03f7fa9-43f0-496e-96a3-c201d1ce4b56</Id>
+  <user Id="97b38f8f-e768-4574-a7bd-ed7de681e1a1">
     <name>George</name>
     <surname>Peterson</surname>
     <dateOfBirth resolves-to="java.time.Ser">
@@ -12,8 +11,7 @@
     <phoneNumber>999-999-9999</phoneNumber>
     <carsCollection/>
   </user>
-  <user>
-    <Id>7e39475d-9f2f-482d-8829-a3a6dbf7ab5a</Id>
+  <user Id="050953bd-92e8-4498-84d4-b1977a6b2116">
     <name>Peter</name>
     <surname>Kolin</surname>
     <dateOfBirth resolves-to="java.time.Ser">
@@ -62,8 +60,7 @@
       </com.company.Car.Car>
     </carsCollection>
   </user>
-  <user>
-    <Id>aa0d5db5-4e05-4ac6-97ac-6be8599469a5</Id>
+  <user Id="c3741d16-7ba4-4e43-9552-b397ef95df94">
     <name>Steve</name>
     <surname>Voznik</surname>
     <dateOfBirth resolves-to="java.time.Ser">

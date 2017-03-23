@@ -6,6 +6,7 @@ import com.company.Car.Car;
 import com.company.Car.CarService;
 import com.company.Car.Colors;
 import com.company.User.User;
+import com.company.User.UserDatabase;
 import com.company.User.UsersList;
 
 import javax.xml.bind.JAXBException;
@@ -18,11 +19,11 @@ public class Main {
 
     public static void main(String[] args) throws IOException, JAXBException {
        //Create user db
-        UsersList userDAO = new UsersList();
-        //get object which create user and car
-        //ConsoleReader consoleReader = new ConsoleReader();
-        //create some users
-
+//        UsersList userDAO = new UsersList();
+//        //get object which create user and car
+//        //ConsoleReader consoleReader = new ConsoleReader();
+//        //create some users
+//
 //        User user1 = consoleReader.createUser();
 //        User user2 = consoleReader.createUser();
 //        User user3 = consoleReader.createUser();
@@ -73,41 +74,41 @@ public class Main {
                 .setDateOfProduction(LocalDate.of(1932,1,1))
                 .setNumber("CC-333-CC")
                 .build();
-
-        //add users to DB
-        userDAO.addUser(user1);
-        userDAO.addUser(user2);
-        userDAO.addUser(user3);
-
-        //show list of added users
-        List<User> allUser = userDAO.getUsers();
-
-        System.out.println("");
-
-        //find user by name;
-        User userFromBase1 = userDAO.findUserByName("Peter");
-        //System.out.println(userFromBase1);
-        //System.out.println("");
-
-        //find user by surname;
-        User userFromBase2 = userDAO.findUserBySurname("Peterson");
-        //System.out.println(userFromBase2);
-        //System.out.println("");
-
-        //find user by number of phone
-
-        User userFromBase3 = userDAO.findUserByPhoneNumber("777-777-7777");
-
-        //add cars to user which was found
-        userFromBase1.addCar(car1);
-        userFromBase1.addCar(car2);
-        userFromBase1.addCar(car3);
-
-        //userFromBase1.getCarsOfUser().forEach(System.out::println);
-
-        //user cars sorting
-       CarService carService = new CarService(userFromBase1.getCarsOfUser());
-       carService.sortByDataAcs();
+//
+//        //add users to DB
+//        userDAO.addUser(user1);
+//        userDAO.addUser(user2);
+//        userDAO.addUser(user3);
+//
+//        //show list of added users
+//        List<User> allUser = userDAO.getUsers();
+//
+//        System.out.println("");
+//
+//        //find user by name;
+//        User userFromBase1 = userDAO.findUserByName("Peter");
+//        //System.out.println(userFromBase1);
+//        //System.out.println("");
+//
+//        //find user by surname;
+//        User userFromBase2 = userDAO.findUserBySurname("Peterson");
+//        //System.out.println(userFromBase2);
+//        //System.out.println("");
+//
+//        //find user by number of phone
+//
+//        User userFromBase3 = userDAO.findUserByPhoneNumber("777-777-7777");
+//
+//        //add cars to user which was found
+//        userFromBase1.addCar(car1);
+//        userFromBase1.addCar(car2);
+//        userFromBase1.addCar(car3);
+//
+//        //userFromBase1.getCarsOfUser().forEach(System.out::println);
+//
+//        //user cars sorting
+//       CarService carService = new CarService(userFromBase1.getCarsOfUser());
+//       carService.sortByDataAcs();
    //    carService.getCarCollection().forEach(System.out::println);
 
 
@@ -130,15 +131,23 @@ public class Main {
 //        adapterToXML.writeUser(user1,"TestFile1.xml");
 //        User user = adapterToXML.readUser("TestFile1.xml");
 //        System.out.println(user);
-         AdapterToText adapterToText = new AdapterToText();
+
+//
+//
+//         AdapterToText adapterToText = new AdapterToText();
 //         adapterToText.writeUsers(userDAO,"Test.txt");
 //         List<User> list = adapterToText.readUsers("Test.txt");
 //        System.out.println("list");
 //        System.out.println(list.get(1));
 
-        adapterToText.writeUser(userFromBase1,"Test1.txt");
-        User user = adapterToText.readUser("Test1.txt");
-        System.out.println(userFromBase1);
-        System.out.println(user);
+//        adapterToText.writeUser(userFromBase1
+//        System.out.println(userFromBase1);
+//        System.out.println(user);
+
+        UserDatabase userDatabase = new UserDatabase();
+      //userDatabase.dropUserTable();
+       //userDatabase.createUserTable();
+       //userDatabase.addUser(user1);
+        userDatabase.showAllUsers();
     }
 }

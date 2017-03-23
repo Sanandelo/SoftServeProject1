@@ -97,7 +97,7 @@ public class User {
                 ", surname='" + surname + '\'' +
                 ", dateOfBirth=" + dateOfBirth +
                 ", phoneNumber='" + phoneNumber + '\'' +
-                ", carsCollection=" + carsCollection + "." +
+                ", carsCollection=" + carsCollection  +
                 '}';
     }
 
