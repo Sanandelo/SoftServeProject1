@@ -1,5 +1,5 @@
 <list>
-  <user Id="97b38f8f-e768-4574-a7bd-ed7de681e1a1">
+  <user Id="1254279d-b5df-4cb7-aad4-9d067470fe4f">
     <name>George</name>
     <surname>Peterson</surname>
     <dateOfBirth resolves-to="java.time.Ser">
@@ -11,7 +11,7 @@
     <phoneNumber>999-999-9999</phoneNumber>
     <carsCollection/>
   </user>
-  <user Id="050953bd-92e8-4498-84d4-b1977a6b2116">
+  <user Id="df77a4a8-c1e5-4bf7-9653-0f5092b82d00">
     <name>Peter</name>
     <surname>Kolin</surname>
     <dateOfBirth resolves-to="java.time.Ser">
@@ -23,18 +23,6 @@
     <phoneNumber>888-888-8888</phoneNumber>
     <carsCollection>
       <com.company.Car.Car>
-        <model>RX-2</model>
-        <number>BB-321-BB</number>
-        <color>RED</color>
-        <bodyStyle>SEDAN</bodyStyle>
-        <dateOfProduction resolves-to="java.time.Ser">
-          <byte>3</byte>
-          <int>1963</int>
-          <byte>1</byte>
-          <byte>1</byte>
-        </dateOfProduction>
-      </com.company.Car.Car>
-      <com.company.Car.Car>
         <model>RX-1</model>
         <number>AA-123-AA</number>
         <color>BLACK</color>
@@ -42,6 +30,18 @@
         <dateOfProduction resolves-to="java.time.Ser">
           <byte>3</byte>
           <int>1955</int>
+          <byte>1</byte>
+          <byte>1</byte>
+        </dateOfProduction>
+      </com.company.Car.Car>
+      <com.company.Car.Car>
+        <model>RX-2</model>
+        <number>BB-321-BB</number>
+        <color>RED</color>
+        <bodyStyle>SEDAN</bodyStyle>
+        <dateOfProduction resolves-to="java.time.Ser">
+          <byte>3</byte>
+          <int>1963</int>
           <byte>1</byte>
           <byte>1</byte>
         </dateOfProduction>
@@ -60,7 +60,7 @@
       </com.company.Car.Car>
     </carsCollection>
   </user>
-  <user Id="c3741d16-7ba4-4e43-9552-b397ef95df94">
+  <user Id="e62a406f-1e88-4571-bfcd-c10a6b9aeb38">
     <name>Steve</name>
     <surname>Voznik</surname>
     <dateOfBirth resolves-to="java.time.Ser">

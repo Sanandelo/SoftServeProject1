@@ -36,7 +36,9 @@ public class Car {
     public BodyStyle getBodyStyle() {
         return bodyStyle;
     }
-
+    public void setColor(Colors color){
+        this.color = color;
+    }
     @Override
     public String toString() {
         return "Car{" +

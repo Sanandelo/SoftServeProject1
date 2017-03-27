@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Utilists;
 
 import com.company.User.User;
 import com.company.User.UsersList;

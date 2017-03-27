@@ -8,13 +8,13 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
-public class ConsoleReader implements UserDataInterface,CarDataInterface {
+public class ConsoleReader  {
     private  Scanner sc = new Scanner(System.in);
     private  CarValidator carValidator = new CarValidator();
     private  UserValidator userValidator = new UserValidator();
     private  DateTimeFormatter yearFormatter = DateTimeFormatter.ofPattern("d.MM.yyyy");
 
-    public String readName() {
+    private String readName() {
         String name;
         while (true) {
             System.out.println("Please type Name: ");
@@ -28,7 +28,7 @@ public class ConsoleReader implements UserDataInterface,CarDataInterface {
         }
         return name;
     }
-    public String readModel() {
+    private String readModel() {
         String model;
         while (true) {
             System.out.println("Please type Model of car: ");
@@ -43,7 +43,7 @@ public class ConsoleReader implements UserDataInterface,CarDataInterface {
         return model;
     }
 
-    public String readSurname() {
+    private String readSurname() {
         String surname;
         while (true) {
             System.out.println("Please type Surname: ");
@@ -58,7 +58,7 @@ public class ConsoleReader implements UserDataInterface,CarDataInterface {
         }
         return surname;
     }
-    public LocalDate readDateOfBirth() {
+    private LocalDate readDateOfBirth() {
         LocalDate date;
         while (true) {
             System.out.println("Please type date of birth: (dd.mm.yyyy)");
@@ -77,7 +77,7 @@ public class ConsoleReader implements UserDataInterface,CarDataInterface {
         }
         return date;
     }
-    public LocalDate readDateOfProduction() {
+    private LocalDate readDateOfProduction() {
         LocalDate date;
         while (true) {
             System.out.println("Please type date of production: (dd.mm.yyyy)");
@@ -97,7 +97,7 @@ public class ConsoleReader implements UserDataInterface,CarDataInterface {
         return date;
     }
 
-    public String readCarNumber() {
+    private String readCarNumber() {
         String number;
         while (true) {
             System.out.println("Please type car number: (AA-333-AA)");
@@ -112,15 +112,15 @@ public class ConsoleReader implements UserDataInterface,CarDataInterface {
         return number;
     }
 
-    public BodyStyle readBodyStyle() {
+    private BodyStyle readBodyStyle() {
         BodyStyle bodyStyle;
         while (true) {
             System.out.println("Please choose car model from a list: ");
             for(BodyStyle bs : BodyStyle.values()){
                 System.out.println(bs);
             }
-            String input = sc.nextLine();
-            input.toUpperCase();
+            String input = sc.nextLine().toUpperCase();
+
             if (carValidator.isValidBodyStyle(input)) {
                 bodyStyle = BodyStyle.valueOf(input);
                 break;
@@ -131,7 +131,7 @@ public class ConsoleReader implements UserDataInterface,CarDataInterface {
         return bodyStyle;
     }
 
-    public Colors readColor() {
+    private Colors readColor() {
         Colors color;
         while (true) {
             System.out.println("Please choose car color from a list: ");
@@ -139,8 +139,8 @@ public class ConsoleReader implements UserDataInterface,CarDataInterface {
                     Colors.values()) {
                 System.out.println(c);
             }
-            String input = sc.nextLine();
-            input.toUpperCase();
+            String input = sc.nextLine().toUpperCase();
+
             if (carValidator.isValidColor(input)) {
                 color = Colors.valueOf(input);
                 break;
@@ -151,7 +151,7 @@ public class ConsoleReader implements UserDataInterface,CarDataInterface {
         return color;
     }
 
-    public String readPhoneNumber() {
+    private String readPhoneNumber() {
         String number;
         while (true) {
             System.out.println("Please type phone number: (999-999-9999)");

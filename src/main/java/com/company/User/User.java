@@ -10,7 +10,7 @@ import java.util.UUID;
 
 
 public class User {
-    private String Id;//atribute in xml for user
+    private String Id;
     private String name;
     private String surname;
     private LocalDate dateOfBirth;

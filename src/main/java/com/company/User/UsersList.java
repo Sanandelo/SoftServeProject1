@@ -14,10 +14,6 @@ public class UsersList {
         users = new ArrayList<>();
     }
 
-    //Check whether base is empty
-    public boolean isBaseEmpty(){
-        return users.isEmpty();
-    }
 
     //CRUD realisation
     //add user to base
@@ -93,7 +89,8 @@ public class UsersList {
         }
         return result;
     }
-    public void sortByName(){
+    public List<User> sortByName(){
         users.sort((user1, user2) -> user1.getName().compareTo(user2.getName()));
+        return getUsers();
     }
 }
