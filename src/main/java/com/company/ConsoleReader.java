@@ -28,8 +28,7 @@ public class ConsoleReader  {
                 System.out.println("Invalid input. Please try again");
             }
         }
-
-
+        String lol;
         return name;
     }
     private String readModel() {
