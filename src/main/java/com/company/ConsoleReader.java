@@ -15,6 +15,8 @@ public class ConsoleReader  {
     private  DateTimeFormatter yearFormatter = DateTimeFormatter.ofPattern("d.MM.yyyy");
 
     private String readName() {
+
+
         String name;
         while (true) {
             System.out.println("Please type Name: ");
@@ -26,6 +28,8 @@ public class ConsoleReader  {
                 System.out.println("Invalid input. Please try again");
             }
         }
+
+
         return name;
     }
     private String readModel() {
